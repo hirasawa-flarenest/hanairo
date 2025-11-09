@@ -16,6 +16,7 @@ frontend:
     baseDirectory: out
     files:
       - '**/*'
+      - '.static'
   cache:
     paths:
       - ~/.pnpm-store
