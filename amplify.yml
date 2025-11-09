@@ -1,0 +1,21 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - node -v
+        - corepack enable
+        - corepack prepare pnpm@10.14.0 --activate
+        - pnpm -v
+        - pnpm install --frozen-lockfile
+    build:
+      commands:
+        - pnpm build
+  artifacts:
+    baseDirectory: out
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - ~/.pnpm-store
+      - node_modules/.pnpm
