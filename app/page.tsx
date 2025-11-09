@@ -31,10 +31,11 @@ import { mapMicroCMSAnnouncements } from "@/lib/mappers/announcement";
 import { mapMicroCMSActivities } from "@/lib/mappers/activity";
 import { mapMicroCMSFAQs } from "@/lib/mappers/faq";
 import { mapMicroCMSMonthSchedules } from "@/lib/mappers/schedule";
+import type { Announcement, Activity, FAQ, MonthSchedule } from "@/lib/types";
 
 export default async function HomePage() {
   // microCMSからお知らせデータを取得
-  let announcements = [];
+  let announcements: Announcement[] = [];
   try {
     const announcementsData = await getAnnouncements({ limit: 10 });
     announcements = mapMicroCMSAnnouncements(announcementsData.contents);
@@ -43,7 +44,7 @@ export default async function HomePage() {
   }
 
   // microCMSから活動紹介データを取得
-  let activities = [];
+  let activities: Activity[] = [];
   try {
     const activitiesData = await getActivities({ limit: 10 });
     activities = mapMicroCMSActivities(activitiesData.contents);
@@ -52,7 +53,7 @@ export default async function HomePage() {
   }
 
   // microCMSからヘッダーお知らせバナーを取得（公開されている場合のみ表示）
-  let closureNotice = "";
+  let closureNotice: string = "";
   try {
     const closureNoticeData = await getClosureNotice();
     // publishedAtが存在する場合のみメッセージを表示
@@ -68,7 +69,7 @@ export default async function HomePage() {
   }
 
   // microCMSからよくあるご質問を取得
-  let faqs = [];
+  let faqs: FAQ[] = [];
   try {
     const faqsData = await getFAQs({ limit: 100 });
     faqs = mapMicroCMSFAQs(faqsData.contents);
@@ -77,7 +78,7 @@ export default async function HomePage() {
   }
 
   // microCMSから月間スケジュールを取得
-  let schedules = [];
+  let schedules: MonthSchedule[] = [];
   try {
     const schedulesData = await getMonthSchedules({ limit: 12 });
     schedules = mapMicroCMSMonthSchedules(schedulesData.contents);
