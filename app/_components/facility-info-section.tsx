@@ -193,36 +193,6 @@ export function FacilityInfoSection({
                   </dd>
                 </div>
               )}
-
-              {pricing.freePass && (
-                <div className="hiroba-introduction__hours-item">
-                  <dt className="hiroba-introduction__hours-label">
-                    フリーパス
-                  </dt>
-                  <dd className="hiroba-introduction__hours-value">
-                    <div>{pricing.freePass.price}</div>
-                    {pricing.freePass.note && (
-                      <div className="facility-info-price-note">
-                        {pricing.freePass.note}
-                      </div>
-                    )}
-                  </dd>
-                </div>
-              )}
-
-              {pricing.ticketBook && (
-                <div className="hiroba-introduction__hours-item">
-                  <dt className="hiroba-introduction__hours-label">回数券</dt>
-                  <dd className="hiroba-introduction__hours-value">
-                    <div>{pricing.ticketBook.price}</div>
-                    {pricing.ticketBook.note && (
-                      <div className="facility-info-price-note">
-                        {pricing.ticketBook.note}
-                      </div>
-                    )}
-                  </dd>
-                </div>
-              )}
             </dl>
           </div>
         )}

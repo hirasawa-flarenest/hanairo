@@ -24,6 +24,6 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
 export const FOOTER_LINKS = [
   "個人情報保護方針（準備中）",
   "サイトマップ（構成案）",
-  "著作権表示 © Puanaroom",
+  "著作権表示 © Hanairo",
   "関連リンク：地域子育て支援センター一覧",
 ];

@@ -1,4 +1,4 @@
-# Puanaroom
+# Hanairo
 
 「おやこの広場 はないろ」の公式Webサイト。横浜市青葉区市ヶ尾にある0歳から3歳の未就園児と保護者が集う子育てひろばの情報を提供しています。
 
@@ -77,7 +77,7 @@ pnpm lint
 ## プロジェクト構成
 
 ```
-puanaroom/
+hanairo/
 ├── app/                        # Next.js App Router
 │   ├── _components/           # Reactコンポーネント
 │   ├── globals.css            # グローバルスタイル

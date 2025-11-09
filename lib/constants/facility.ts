@@ -142,20 +142,12 @@ export const FACILITY_INFO: FacilityInfoSectionProps = {
   },
   pricing: {
     membershipFee: {
-      price: "1,000円",
-      note: "一家族初回のみ。永久会員",
+      price: "500円",
+      note: "一家族初回のみ。",
     },
     usageFee: {
       member: "100円／1回",
       nonMember: "300円／1回",
-    },
-    freePass: {
-      price: "1,000円／1ヶ月",
-      note: "会員のみ",
-    },
-    ticketBook: {
-      price: "1,000円／11回",
-      note: "無期限・会員のみ",
     },
   },
   noReservationText: "予約不要",

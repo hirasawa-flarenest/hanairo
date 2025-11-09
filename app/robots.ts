@@ -19,6 +19,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [],
       },
     ],
-    sitemap: "https://puanaroom.com/sitemap.xml",
+    sitemap: "https://hanairo.com/sitemap.xml",
   };
 }

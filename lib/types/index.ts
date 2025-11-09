@@ -145,21 +145,9 @@ export interface UsageFee {
   nonMember: string;
 }
 
-export interface FreePass {
-  price: string;
-  note: string;
-}
-
-export interface TicketBook {
-  price: string;
-  note: string;
-}
-
 export interface Pricing {
   membershipFee: MembershipFee;
   usageFee: UsageFee;
-  freePass: FreePass;
-  ticketBook: TicketBook;
 }
 
 export interface FacilityInfoSectionProps {

@@ -96,14 +96,14 @@ export default async function HomePage() {
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://puanaroom.com/#localbusiness",
+        "@id": "https://hanairo.com/#localbusiness",
         "name": "おやこの広場 はないろ",
         "alternateName": "Hanairo Oyako no Hiroba",
         "description": "0歳から3歳の未就園児のお子さまと保護者の方が気軽に集い、交流やイベントを行う常設型の広場です。子育て情報を入手したり、子育て相談ができる場所です。",
-        "url": "https://puanaroom.com",
+        "url": "https://hanairo.com",
         "telephone": "+81-90-6510-3126",
         "priceRange": "¥100-¥1000",
-        "image": "https://puanaroom.com/images/アイキャッチ_puanaroom.jpg",
+        "image": "https://hanairo.com/images/アイキャッチ_hanairo.jpg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "市ヶ尾町436-1 エスポアール市ヶ尾103",
@@ -129,10 +129,10 @@ export default async function HomePage() {
       },
       {
         "@type": "Organization",
-        "@id": "https://puanaroom.com/#organization",
+        "@id": "https://hanairo.com/#organization",
         "name": "株式会社Puana",
-        "url": "https://puanaroom.com",
-        "logo": "https://puanaroom.com/images/Puana-Logo.jpg",
+        "url": "https://hanairo.com",
+        "logo": "https://hanairo.com/images/Puana-Logo.jpg",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+81-90-6510-3126",
@@ -143,12 +143,12 @@ export default async function HomePage() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://puanaroom.com/#website",
-        "url": "https://puanaroom.com",
+        "@id": "https://hanairo.com/#website",
+        "url": "https://hanairo.com",
         "name": "おやこの広場 はないろ",
         "description": "横浜市青葉区市ヶ尾にある0歳から3歳の未就園児と保護者が集う子育てひろば",
         "publisher": {
-          "@id": "https://puanaroom.com/#organization",
+          "@id": "https://hanairo.com/#organization",
         },
         "inLanguage": "ja",
       },
@@ -195,7 +195,7 @@ export default async function HomePage() {
           <div className="wireframe-hero__media">
             <Image
               className="wireframe-hero__image"
-              src="/images/アイキャッチ_puanaroom.jpg"
+              src="/images/アイキャッチ_hanairo.jpg"
               alt="子育てひろば はないろの様子"
               width={1920}
               height={1080}

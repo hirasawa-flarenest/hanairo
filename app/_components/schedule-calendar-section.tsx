@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import type { MonthSchedule } from "@/lib/types";
 import { useSlideAnimation } from "@/lib/hooks";
 
@@ -131,13 +132,16 @@ export function ScheduleCalendarSection({
         >
           {currentSchedule ? (
             <div className="schedule-calendar-section__image-wrapper">
-              <img
+              <Image
                 src={currentSchedule.imageUrl}
                 alt={
                   currentSchedule.imageAlt ??
                   `${formatMonthDisplay(displayYear, displayMonth)}のスケジュール`
                 }
+                width={800}
+                height={600}
                 className="schedule-calendar-section__image"
+                sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
           ) : (

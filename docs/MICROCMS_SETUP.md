@@ -18,7 +18,7 @@
 
 1. [microCMS](https://microcms.io/)にログイン
 2. 新しいサービスを作成
-3. サービスIDをメモ（例: `puanaroom`）
+3. サービスIDをメモ（例: `hanairo`）
 
 ### 1.2 APIエンドポイント
 
@@ -153,7 +153,7 @@ MICROCMS_API_KEY=your-api-key
 ```
 
 **パラメータ説明**:
-- `MICROCMS_SERVICE_DOMAIN`: microCMSのサービスID（例: `puanaroom`）
+- `MICROCMS_SERVICE_DOMAIN`: microCMSのサービスID（例: `hanairo`）
 - `MICROCMS_API_KEY`: microCMSで取得したAPIキー（GET権限）
 
 **APIキーの取得方法**:
