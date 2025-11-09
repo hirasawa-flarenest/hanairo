@@ -34,12 +34,22 @@ import { mapMicroCMSMonthSchedules } from "@/lib/mappers/schedule";
 
 export default async function HomePage() {
   // microCMSからお知らせデータを取得
-  const announcementsData = await getAnnouncements({ limit: 10 });
-  const announcements = mapMicroCMSAnnouncements(announcementsData.contents);
+  let announcements = [];
+  try {
+    const announcementsData = await getAnnouncements({ limit: 10 });
+    announcements = mapMicroCMSAnnouncements(announcementsData.contents);
+  } catch (error) {
+    console.error("Failed to fetch announcements:", error);
+  }
 
   // microCMSから活動紹介データを取得
-  const activitiesData = await getActivities({ limit: 10 });
-  const activities = mapMicroCMSActivities(activitiesData.contents);
+  let activities = [];
+  try {
+    const activitiesData = await getActivities({ limit: 10 });
+    activities = mapMicroCMSActivities(activitiesData.contents);
+  } catch (error) {
+    console.error("Failed to fetch activities:", error);
+  }
 
   // microCMSからヘッダーお知らせバナーを取得（公開されている場合のみ表示）
   let closureNotice = "";
@@ -58,12 +68,22 @@ export default async function HomePage() {
   }
 
   // microCMSからよくあるご質問を取得
-  const faqsData = await getFAQs({ limit: 100 });
-  const faqs = mapMicroCMSFAQs(faqsData.contents);
+  let faqs = [];
+  try {
+    const faqsData = await getFAQs({ limit: 100 });
+    faqs = mapMicroCMSFAQs(faqsData.contents);
+  } catch (error) {
+    console.error("Failed to fetch FAQs:", error);
+  }
 
   // microCMSから月間スケジュールを取得
-  const schedulesData = await getMonthSchedules({ limit: 12 });
-  const schedules = mapMicroCMSMonthSchedules(schedulesData.contents);
+  let schedules = [];
+  try {
+    const schedulesData = await getMonthSchedules({ limit: 12 });
+    schedules = mapMicroCMSMonthSchedules(schedulesData.contents);
+  } catch (error) {
+    console.error("Failed to fetch schedules:", error);
+  }
 
   // 初期表示月を決定：当月 > 未来月で最も近い月 > 最初のスケジュール
   const today = new Date();
