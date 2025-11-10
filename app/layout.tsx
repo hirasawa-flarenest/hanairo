@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     template: "%s | おやこの広場 はないろ",
   },
   icons: {
-    icon: "/images/Puana-Logo.jpg",
-    apple: "/images/Puana-Logo.jpg",
+    icon: "/images/hanairo_logo.jpg",
+    apple: "/images/hanairo_logo.jpg",
   },
   description: "横浜市青葉区市ヶ尾にある0歳から3歳の未就園児と保護者が集う子育てひろば。子育て相談、イベント開催、親子交流の場として地域に根ざした温かい空間を提供しています。",
   keywords: [

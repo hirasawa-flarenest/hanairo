@@ -122,7 +122,7 @@ export default async function HomePage() {
         "alternateName": "Hanairo Oyako no Hiroba",
         "description": "0歳から3歳の未就園児のお子さまと保護者の方が気軽に集い、交流やイベントを行う常設型の広場です。子育て情報を入手したり、子育て相談ができる場所です。",
         "url": "https://hanairo.com",
-        "telephone": "+81-90-6510-3126",
+        "telephone": "+81-45-482-9036",
         "priceRange": "¥100-¥1000",
         "image": "https://hanairo.com/images/アイキャッチ_hanairo.jpg",
         "address": {
@@ -153,10 +153,10 @@ export default async function HomePage() {
         "@id": "https://hanairo.com/#organization",
         "name": "株式会社Puana",
         "url": "https://hanairo.com",
-        "logo": "https://hanairo.com/images/Puana-Logo.jpg",
+        "logo": "https://hanairo.com/images/hanairo_logo.jpg",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+81-90-6510-3126",
+          "telephone": "+81-45-482-9036",
           "contactType": "customer service",
           "areaServed": "JP",
           "availableLanguage": "Japanese",
@@ -187,10 +187,10 @@ export default async function HomePage() {
           <div className="site-header__brand">
             <Image
               className="site-header__logo"
-              src="/images/Puana-Logo.jpg"
+              src="/images/hanairo_logo.jpg"
               alt="おやこの広場 はないろ ロゴ"
-              width={44}
-              height={44}
+              width={100}
+              height={100}
               priority
             />
             <div className="site-header__brand-text">

@@ -75,7 +75,7 @@ const PRIVACY_POLICY_CONTENT = `
   <p style="margin-bottom: 0.5em; padding-left: 1em;">
     <strong>おやこの広場 はないろ</strong><br>
     〒225-0024 横浜市青葉区市ヶ尾町436-1 エスポアール市ヶ尾103<br>
-    電話：090-6510-3126<br>
+    電話：045-482-9036<br>
     営業時間：平日 月〜金 9:30〜16:00
   </p>
 
@@ -94,10 +94,10 @@ export function SiteFooter() {
         <div className="site-footer__inner">
           <div className="site-footer__brand">
             <Image
-              src="/images/Puana-Logo.jpg"
+              src="/images/hanairo_logo.jpg"
               alt="おやこの広場 はないろ ロゴ"
-              width={60}
-              height={60}
+              width={70}
+              height={70}
             />
             <div>
               <div className="site-footer__brand-name">
@@ -169,7 +169,7 @@ export function SiteFooter() {
             <div className="site-footer__info-item">
               <div className="site-footer__info-label">電話</div>
               <div>
-                <a href="tel:09065103126">090-6510-3126</a>
+                <a href="tel:0454829036">045-482-9036</a>
               </div>
             </div>
             <div className="site-footer__info-item">

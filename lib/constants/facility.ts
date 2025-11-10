@@ -14,8 +14,8 @@ export const CONTACT_METHODS: ContactMethod[] = [
     type: "phone",
     title: "お電話でのお問い合わせ",
     description: "お気軽にお電話ください。スタッフが丁寧に対応いたします。",
-    link: "tel:09065103126",
-    linkText: "090-6510-3126",
+    link: "tel:0454829036",
+    linkText: "045-482-9036",
     hours: "受付時間：平日 10:00〜16:00、土曜 10:00〜15:00",
   },
   {
@@ -38,8 +38,8 @@ export const COMPANY_INFO: CompanyInfo = {
   postalCode: "〒227-0033",
   address: "横浜市青葉区市ヶ尾町436-1エスポアール市ヶ尾103",
   establishedYear: "2018年4月",
-  phoneNumber: "09065103126",
-  phoneNumberDisplay: "090-6510-3126",
+  phoneNumber: "0454829036",
+  phoneNumberDisplay: "045-482-9036",
   businessHours: "平日 月〜金 9:30〜16:00",
   accessInfo: [
     { station: "市ヶ尾駅", walkingTime: "徒歩17分" },
@@ -142,8 +142,8 @@ export const FACILITY_INFO: FacilityInfoSectionProps = {
   },
   pricing: {
     membershipFee: {
-      price: "500円",
-      note: "一家族初回のみ。",
+      price: "1家族500円／年度",
+      note: "年会費として毎年度お支払いいただきます。",
     },
     usageFee: {
       member: "100円／1回",

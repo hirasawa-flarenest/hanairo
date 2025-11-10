@@ -112,5 +112,5 @@ Private - 株式会社Puana
 
 ## お問い合わせ
 
-- 電話: 090-6510-3126
+- 電話: 045-482-9036
 - Instagram: [@hanairo_ichigao](https://www.instagram.com/hanairo_ichigao/)
