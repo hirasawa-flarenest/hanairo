@@ -318,6 +318,16 @@ export function FacilityInfoSection({
                           {access.parking.onsite ? "○" : "×"}
                         </span>
                       </div>
+                      {access.parking.nearby && (
+                        <div className="access-facility-item">
+                          <span className="access-facility-label">
+                            近隣コインパーキング
+                          </span>
+                          <span className="access-facility-status access-facility-status--available">
+                            ○
+                          </span>
+                        </div>
+                      )}
                     </>
                   )}
                   {access.bicycleParking !== undefined && (

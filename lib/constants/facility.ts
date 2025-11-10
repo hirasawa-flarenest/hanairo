@@ -112,7 +112,7 @@ export const HIROBA_INTRODUCTION: HirobaIntroductionProps = {
 export const FACILITY_INFO: FacilityInfoSectionProps = {
   title: "ご利用案内",
   subtitle: "ご利用方法や料金についてご案内します",
-  targetUsers: ["0歳から3歳の未就園児のお子さまと保護者の方", "妊娠中の方"],
+  targetUsers: ["未就学児（主に0〜3歳）のお子様と保護者", "妊娠中の方（利用料無料）"],
   businessHours: {
     weekdays: "10:00〜16:00",
     weekends: "10:00〜15:00",
@@ -127,7 +127,7 @@ export const FACILITY_INFO: FacilityInfoSectionProps = {
     ],
     parking: {
       onsite: false,
-      nearby: false,
+      nearby: true,
     },
     bicycleParking: true,
     strollerParking: true,
