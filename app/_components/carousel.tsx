@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useRef, useEffect } from "react";
 
 interface CarouselProps {
   children: ReactNode;
@@ -13,13 +13,25 @@ interface CarouselProps {
  * スマホ対応のスクロールバーデザインを含む
  */
 export function Carousel({ children, className = "", itemWidth = 280 }: CarouselProps) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // 初期表示時に一番左にスクロール位置を設定
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0;
+    }
+  }, []);
+
   return (
     <div className={`carousel ${className}`}>
       <div
+        ref={scrollRef}
         className="carousel__scroll"
-        style={{
-          ['--carousel-item-width' as string]: `${itemWidth}px`
-        }}
+        style={
+          {
+            '--carousel-item-width': `${itemWidth}px`,
+          } as React.CSSProperties
+        }
       >
         {children}
       </div>
