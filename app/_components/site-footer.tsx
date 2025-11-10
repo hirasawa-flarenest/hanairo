@@ -96,8 +96,8 @@ export function SiteFooter() {
             <Image
               src="/images/hanairo_logo.jpg"
               alt="おやこの広場 はないろ ロゴ"
-              width={70}
-              height={70}
+              width={80}
+              height={50}
             />
             <div>
               <div className="site-footer__brand-name">
