@@ -250,7 +250,7 @@ export default async function HomePage() {
           <div className="wireframe-hero__media">
             <Image
               className="wireframe-hero__image"
-              src="/images/アイキャッチ_hanairo.jpg"
+              src="/images/hanairo_アイキャッチ.jpg"
               alt="子育てひろば はないろの様子"
               width={1920}
               height={1080}

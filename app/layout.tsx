@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description: "横浜市青葉区市ヶ尾にある0歳から3歳の未就園児と保護者が集う子育てひろば。子育て相談、イベント開催、親子交流の場として地域に根ざした温かい空間を提供しています。",
     images: [
       {
-        url: "/images/アイキャッチ_hanairo.jpg",
+        url: "/images/hanairo_アイキャッチ.jpg",
         width: 1920,
         height: 1080,
         alt: "おやこの広場 はないろの様子",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "おやこの広場 はないろ｜横浜市青葉区の子育てひろば",
     description: "横浜市青葉区市ヶ尾にある0歳から3歳の未就園児と保護者が集う子育てひろば。子育て相談、イベント開催、親子交流の場として地域に根ざした温かい空間を提供しています。",
-    images: ["/images/アイキャッチ_hanairo.jpg"],
+    images: ["/images/hanairo_アイキャッチ.jpg"],
   },
   robots: {
     index: true,
