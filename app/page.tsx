@@ -26,12 +26,12 @@ import {
   HIROBA_INTRODUCTION,
   FACILITY_INFO,
 } from "@/lib/constants";
-import { getAnnouncements, getActivities, getClosureNotice, getFAQs, getMonthSchedules } from "@/lib/api/microcms";
+import { getAnnouncements, getActivities, getClosureNotice, getMonthSchedules, getStaff } from "@/lib/api/microcms";
 import { mapMicroCMSAnnouncements } from "@/lib/mappers/announcement";
 import { mapMicroCMSActivities } from "@/lib/mappers/activity";
-import { mapMicroCMSFAQs } from "@/lib/mappers/faq";
 import { mapMicroCMSMonthSchedules } from "@/lib/mappers/schedule";
-import type { Announcement, Activity, FAQ, MonthSchedule } from "@/lib/types";
+import { mapMicroCMSStaffList, mapStaffListToStaffMemberList } from "@/lib/mappers/staff";
+import type { Announcement, Activity, FAQ, MonthSchedule, StaffMember } from "@/lib/types";
 
 export default async function HomePage() {
   // microCMSからお知らせデータを取得
@@ -52,6 +52,17 @@ export default async function HomePage() {
     console.error("Failed to fetch activities:", error);
   }
 
+  // microCMSからスタッフ紹介データを取得
+  let staffMembers: StaffMember[] = [];
+  try {
+    const staffData = await getStaff({ limit: 100 });
+    const staff = mapMicroCMSStaffList(staffData.contents);
+    staffMembers = mapStaffListToStaffMemberList(staff);
+    console.log(`✅ スタッフデータ取得成功: ${staffMembers.length}件`, staffMembers);
+  } catch (error) {
+    console.error("Failed to fetch staff:", error);
+  }
+
   // microCMSからヘッダーお知らせバナーを取得（公開されている場合のみ表示）
   let closureNotice: string = "";
   try {
@@ -68,14 +79,37 @@ export default async function HomePage() {
     }
   }
 
-  // microCMSからよくあるご質問を取得
-  let faqs: FAQ[] = [];
-  try {
-    const faqsData = await getFAQs({ limit: 100 });
-    faqs = mapMicroCMSFAQs(faqsData.contents);
-  } catch (error) {
-    console.error("Failed to fetch FAQs:", error);
-  }
+  // よくあるご質問（ハードコード）
+  const faqs: FAQ[] = [
+    {
+      id: "faq-1",
+      question: "お昼ご飯は食べれますか？",
+      answer: "12:00〜13:00の間、広場内で食べられます",
+      category: "usage",
+      order: 1,
+    },
+    {
+      id: "faq-2",
+      question: "授乳室はありますか？",
+      answer: "お部屋にカーテンで仕切れるコーナーがあります。ミルクを作る際のお湯もあります。",
+      category: "facility",
+      order: 2,
+    },
+    {
+      id: "faq-3",
+      question: "駐車場・駐輪場はありますか？",
+      answer: "専有の駐車場はございませんが、施設のすぐ近くにコインパーキングがあります。駐輪場は施設のあるマンションの駐輪場に停められます。",
+      category: "facility",
+      order: 3,
+    },
+    {
+      id: "faq-4",
+      question: "ベビーカーはとめられますか？",
+      answer: "ベビーカーは玄関前にとめられますのでそのままお入りください。",
+      category: "facility",
+      order: 4,
+    },
+  ];
 
   // microCMSから月間スケジュールを取得
   let schedules: MonthSchedule[] = [];
@@ -262,7 +296,10 @@ export default async function HomePage() {
           instagramUrl={INSTAGRAM_URL}
         />
 
-        <HirobaIntroductionSection {...HIROBA_INTRODUCTION} />
+        <HirobaIntroductionSection
+          {...HIROBA_INTRODUCTION}
+          staff={staffMembers}
+        />
 
         <FacilityInfoSection id="guide" {...FACILITY_INFO} />
 

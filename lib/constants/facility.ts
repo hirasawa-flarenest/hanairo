@@ -54,65 +54,17 @@ export const HIROBA_INTRODUCTION: HirobaIntroductionProps = {
     description:
       "おやこの広場 はないろは、未就学児（主に0〜3歳）のお子さまと保護者の方が気軽に集い、交流や子育て情報を入手したり、子育て相談がいつでもできる常設型の広場です！スタッフには子育て経験者や、現在子育て真っ只中のママ、保育士などがいます！毎月、様々なイベントも開催しています！毎日の子育ての日常の中に、ホッとひと息つける♡ ような居心地の良さを大切にした地域に寄り添う広場です♪",
   },
-  staff: [
-    {
-      name: "田中 花子",
-      role: "保育士・施設長",
-      image: "/images/staffs/スクリーンショット 2025-10-15 0.54.07.png",
-      description: "10年以上の保育経験を持ち、子育て支援に情熱を注いでいます。",
-    },
-    {
-      name: "佐藤 美咲",
-      role: "助産師",
-      image: "/images/staffs/スクリーンショット 2025-10-15 0.54.07.png",
-      description: "産前産後のケアや育児相談に対応しています。",
-    },
-    {
-      name: "鈴木 太郎",
-      role: "子育て支援員",
-      image: "/images/staffs/スクリーンショット 2025-10-15 0.54.07.png",
-      description: "イベント企画や日々の運営をサポートしています。",
-    },
-  ],
-  facilityPhotos: [
-    {
-      src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_13.jpg",
-      alt: "おもちゃ",
-      label: "おもちゃ",
-    },
-    {
-      src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_15.jpg",
-      alt: "絵本コーナー",
-      label: "絵本コーナー",
-    },
-    {
-      src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_16.jpg",
-      alt: "プレイスペース",
-      label: "遊び場",
-    },
-    {
-      src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_18.jpg",
-      alt: "授乳室",
-      label: "授乳室",
-    },
-    {
-      src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_21.jpg",
-      alt: "休憩エリア",
-      label: "休憩エリア",
-    },
-    {
-      src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_22.jpg",
-      alt: "キッチン",
-      label: "キッチン",
-    },
-  ],
-  mapImage: "/images/S__23543813.jpg",
+  staff: [], // microCMSから取得
+  mapImage: "/images/hanairo_map_20251203.png",
 };
 
 export const FACILITY_INFO: FacilityInfoSectionProps = {
   title: "ご利用案内",
   subtitle: "ご利用方法や料金についてご案内します",
-  targetUsers: ["未就学児（主に0〜3歳）のお子様と保護者", "妊娠中の方（利用料無料）"],
+  targetUsers: [
+    "未就学児（主に0〜3歳）のお子様と保護者",
+    "妊娠中の方（利用料無料）",
+  ],
   businessHours: {
     weekdays: "10:00〜16:00",
     weekends: "10:00〜15:00",
@@ -132,9 +84,8 @@ export const FACILITY_INFO: FacilityInfoSectionProps = {
     bicycleParking: true,
     strollerParking: true,
     googleMapUrl:
-      "https://maps.google.com/maps?q=35.5619458,139.5448289&hl=ja&z=16&output=embed",
-    googleMapsAppUrl:
-      "https://www.google.com/maps/search/?api=1&query=35.5619458,139.5448289",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d812.9!2d139.5435803!3d35.5417013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f709af176945%3A0x41d798c3e8cd7d63!2z44GK44KE44GT44Gu5bqD5aC0IOOBr-OBquOBhOOCjQ!5e0!3m2!1sja!2sjp!4v1",
+    googleMapsAppUrl: "https://maps.app.goo.gl/7k2oaouQdedqz5z28",
   },
   openingHours: {
     weekdays: "月〜金 9:30〜16:00",

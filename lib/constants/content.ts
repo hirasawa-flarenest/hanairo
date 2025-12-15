@@ -13,44 +13,44 @@ import type {
 
 export const PHOTO_GALLERY_PHOTOS: PhotoItem[] = [
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_1.jpg",
-    alt: "ひろばの様子1",
+    src: "/images/gallery/S__24068103.jpg",
+    alt: "入口",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_2.jpg",
-    alt: "ひろばの様子2",
+    src: "/images/gallery/S__24068105.jpg",
+    alt: "案内看板",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_5.jpg",
-    alt: "ひろばの様子3",
+    src: "/images/gallery/S__24068106.jpg",
+    alt: "プレイルーム",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_6.jpg",
-    alt: "ひろばの様子4",
+    src: "/images/gallery/S__24068107.jpg",
+    alt: "赤ちゃんスペース",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_9.jpg",
-    alt: "ひろばの様子5",
+    src: "/images/gallery/S__24068108.jpg",
+    alt: "おままごとコーナー",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_11.jpg",
-    alt: "ひろばの様子6",
+    src: "/images/gallery/S__24068109.jpg",
+    alt: "表札",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_14.jpg",
-    alt: "ひろばの様子7",
+    src: "/images/gallery/S__24068111_0.jpg",
+    alt: "子育て情報コーナー",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_17.jpg",
-    alt: "ひろばの様子8",
+    src: "/images/gallery/S__24068113_0.jpg",
+    alt: "絵本コーナー",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_19.jpg",
-    alt: "ひろばの様子9",
+    src: "/images/gallery/S__24068114_0.jpg",
+    alt: "ウォーターサーバー",
   },
   {
-    src: "/images/gallery/LINE_ALBUM_ホームページ用写真_251015_20.jpg",
-    alt: "ひろばの様子10",
+    src: "/images/gallery/S__24068115_0.jpg",
+    alt: "おむつ替えスペース",
   },
 ];
 

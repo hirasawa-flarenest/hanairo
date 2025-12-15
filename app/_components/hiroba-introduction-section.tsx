@@ -7,7 +7,6 @@ export type { HirobaIntroductionProps };
 export function HirobaIntroductionSection({
   concept,
   staff,
-  facilityPhotos,
   mapImage,
 }: HirobaIntroductionProps) {
   return (
@@ -50,37 +49,16 @@ export function HirobaIntroductionSection({
           </Carousel>
         </div>
 
-        {/* 施設案内 */}
+        {/* 室内まっぷ */}
         <div className="hiroba-introduction__facility">
-          <h3 className="hiroba-introduction__subtitle">施設案内</h3>
-          <Carousel itemWidth={280}>
-            {facilityPhotos.map((photo, index) => (
-              <CarouselItem key={index}>
-                <div className="facility-photo-item">
-                  <div className="facility-photo-item__image-wrapper">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      width={200}
-                      height={200}
-                      className="facility-photo-item__image"
-                    />
-                  </div>
-                  <p className="facility-photo-item__label">{photo.label}</p>
-                </div>
-              </CarouselItem>
-            ))}
-          </Carousel>
-
-          {/* 地図 */}
           <div className="hiroba-introduction__map-section">
-            <h4 className="hiroba-introduction__map-title">
+            <h3 className="hiroba-introduction__subtitle">
               はないろ 室内まっぷ
-            </h4>
+            </h3>
             <div className="hiroba-introduction__map-image-wrapper">
               <Image
                 src={mapImage}
-                alt="施設までの地図"
+                alt="はないろ室内まっぷ"
                 width={600}
                 height={600}
                 className="hiroba-introduction__map-image"

@@ -63,6 +63,16 @@ export interface MonthSchedule {
   imageAlt: string;
 }
 
+// スタッフ紹介関連（microCMS連携用）
+export interface Staff {
+  id: string;
+  name: string;
+  position?: string;
+  photo?: string;
+  bio?: string;
+  displayOrder: number;
+}
+
 // お問い合わせ関連
 export type ContactMethodType = "phone" | "line" | "email";
 
@@ -91,19 +101,12 @@ export interface StaffMember {
   description: string;
 }
 
-export interface FacilityPhoto {
-  src: string;
-  alt: string;
-  label: string;
-}
-
 export interface HirobaIntroductionProps {
   concept: {
     title: string;
     description: string;
   };
   staff: StaffMember[];
-  facilityPhotos: FacilityPhoto[];
   mapImage: string;
 }
 

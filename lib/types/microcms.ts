@@ -40,13 +40,6 @@ export interface MicroCMSMonthSchedule extends MicroCMSBase {
   scheduleImage?: MicroCMSImage; // 任意フィールド
 }
 
-// よくあるご質問
-export interface MicroCMSFAQ extends MicroCMSBase {
-  question: string;
-  answer: string;
-  category: string[]; // セレクトフィールド（複数選択可能な配列形式）
-}
-
 // ヘッダーお知らせバナー（単一コンテンツ）
 export interface MicroCMSClosureNotice {
   message: string;
@@ -54,4 +47,13 @@ export interface MicroCMSClosureNotice {
   updatedAt: string;
   publishedAt?: string;
   revisedAt?: string;
+}
+
+// スタッフ紹介
+export interface MicroCMSStaff extends MicroCMSBase {
+  name: string; // 名前
+  position?: string; // 役職（任意）
+  photo?: MicroCMSImage; // プロフィール写真（任意）
+  bio?: string; // 紹介文（任意）
+  displayOrder: number; // 表示順
 }

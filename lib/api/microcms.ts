@@ -3,8 +3,8 @@ import type {
   MicroCMSAnnouncement,
   MicroCMSActivity,
   MicroCMSMonthSchedule,
-  MicroCMSFAQ,
   MicroCMSClosureNotice,
+  MicroCMSStaff,
 } from "../types/microcms";
 import type { MicroCMSQueries } from "microcms-js-sdk";
 
@@ -104,19 +104,31 @@ export const getMonthSchedule = async (contentId: string) => {
   return data;
 };
 
+
 /**
- * よくあるご質問一覧を取得
+ * ヘッダーお知らせバナーを取得（単一コンテンツ）
  */
-export const getFAQs = async (queries?: MicroCMSQueries) => {
+export const getClosureNotice = async () => {
+  const data = await client.get<MicroCMSClosureNotice>({
+    endpoint: "closure-notice",
+  });
+
+  return data;
+};
+
+/**
+ * スタッフ一覧を取得
+ */
+export const getStaff = async (queries?: MicroCMSQueries) => {
   const data = await client.get<{
-    contents: MicroCMSFAQ[];
+    contents: MicroCMSStaff[];
     totalCount: number;
     offset: number;
     limit: number;
   }>({
-    endpoint: "faqs",
+    endpoint: "staff",
     queries: {
-      orders: "order",
+      orders: "displayOrder",
       ...queries,
     },
   });
@@ -125,23 +137,12 @@ export const getFAQs = async (queries?: MicroCMSQueries) => {
 };
 
 /**
- * よくあるご質問詳細を取得
+ * スタッフ詳細を取得
  */
-export const getFAQ = async (contentId: string) => {
-  const data = await client.get<MicroCMSFAQ>({
-    endpoint: "faqs",
+export const getStaffMember = async (contentId: string) => {
+  const data = await client.get<MicroCMSStaff>({
+    endpoint: "staff",
     contentId,
-  });
-
-  return data;
-};
-
-/**
- * ヘッダーお知らせバナーを取得（単一コンテンツ）
- */
-export const getClosureNotice = async () => {
-  const data = await client.get<MicroCMSClosureNotice>({
-    endpoint: "closure-notice",
   });
 
   return data;
